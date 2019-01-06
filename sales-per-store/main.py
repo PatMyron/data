@@ -1,5 +1,6 @@
-import pprint
-
+from collections import OrderedDict
+import matplotlib.pyplot as plt
+from operator import itemgetter
 # from https://stores.org/stores-top-retailers-2018/
 
 s = """Walmart	$374.80	Bentonville, Ark.	5,328
@@ -107,4 +108,10 @@ for line in s.splitlines():
     store = line.split()[-1].replace(',', '')
     sales = [s for s in line.split() if '$' in s][0].strip('$')
     salesPerStore[line.split()[0]] = 1000000000 * float(sales) / float(store)
-pprint.PrettyPrinter().pprint((sorted(((v, k) for k, v in salesPerStore.items()), reverse=True)))
+
+plt.figure(figsize=(8, 15))
+plt.barh(*zip(*OrderedDict(sorted(salesPerStore.items(), key=itemgetter(1))).items()))
+plt.xlabel('$')
+plt.title('Sales per Store')
+plt.gca().get_xaxis().get_major_formatter().set_scientific(False)
+plt.show()
