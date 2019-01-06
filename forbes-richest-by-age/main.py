@@ -1,5 +1,7 @@
 import matplotlib.pyplot as plt
 
+# $('#the_list').find('tr').find('td:eq(0), td:eq(4)').remove() // run on https://www.forbes.com/billionaires/list/#version:realtime
+
 s = """#1	Jeff Bezos	$143.5 B	54	Amazon	United States
 	#2	Bill Gates	$93.5 B	62	Microsoft	United States
 	#3	Warren Buffett	$81.8 B	87	Berkshire Hathaway	United States
