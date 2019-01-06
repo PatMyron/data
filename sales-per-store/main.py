@@ -104,7 +104,7 @@ Petco Animal Supplies	$4.17	San Diego	1,502"""
 
 salesPerStore = {}
 for line in s.splitlines():
-  store = line.split()[-1].replace(',', '')
-  sales = [s for s in line.split() if '$' in s][0].strip('$')
-  salesPerStore[line.split()[0]] = 1000000000 * float(sales) / float(store)
+    store = line.split()[-1].replace(',', '')
+    sales = [s for s in line.split() if '$' in s][0].strip('$')
+    salesPerStore[line.split()[0]] = 1000000000 * float(sales) / float(store)
 pprint.PrettyPrinter().pprint((sorted(((v, k) for k, v in salesPerStore.items()), reverse=True)))
