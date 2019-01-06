@@ -112,6 +112,6 @@ for line in s.splitlines():
 plt.figure(figsize=(8, 15))
 plt.barh(*zip(*OrderedDict(sorted(salesPerStore.items(), key=itemgetter(1))).items()))
 plt.xlabel('$')
-plt.title('Sales per Store')
+plt.title('Annual Sales per Store')
 plt.gca().get_xaxis().get_major_formatter().set_scientific(False)
 plt.show()
