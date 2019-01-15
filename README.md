@@ -1,7 +1,11 @@
 The World's Billionaires List by Age
 
-<img src="https://github.com/PatMyron/forbes/raw/master/forbes-richest-by-age/screenshot.png" alt="screenshot" height="auto">
+![screenshot](forbes-richest-by-age/screenshot.png)
 
 Retailers by Sales per Store
 
-<img src="https://github.com/PatMyron/forbes/raw/master/sales-per-store/screenshot.png" alt="screenshot" height="auto">
+![screenshot](sales-per-store/screenshot.png)
+
+U.S.-Booked Air Volume by Company
+
+![screenshot](corporate-travel/screenshot.png)
