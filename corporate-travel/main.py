@@ -10,77 +10,77 @@ IBM
 PwC
 EY
 Apple
-McKinsey-Co-
+McKinsey & Co.
 Accenture
 Boeing
 Microsoft
-Lockheed-Martin
+Lockheed Martin
 Cisco
 Amazon
 GE
-The-World-Bank
+The World Bank
 ExxonMobil
 Google
-Bank-of-America
-JPMorgan-Chase-Co
-KPMG-LLP
+Bank of America
+JPMorgan Chase & Co.
+KPMG LLP
 Roche
 Siemens
 BCG
 FedEx
 Oracle
-Johnson-Johnson
-Wells-Fargo
+Johnson & Johnson
+Wells Fargo
 Comcast
 Citi
 DellEMC
 Raytheon
-Walt-Disney
+Walt Disney
 Facebook
-United-Technologies
+United Technologies
 Sanofi
-Northrop-Grumman
+Northrop Grumman
 Pfizer
 DowDuPont
 Medtronic
-Royal-Dutch-Shell
+Royal Dutch Shell
 SAP
 Merck
 Abbott
 AbbVie
-Time-Warner
-The-Church-of-Jesus-Christ-of-Latter-Day-Saints
+Time Warner
+The Church of Jesus Christ of Latter-Day Saints
 Novartis
 Nike
-General-Motors
+General Motors
 GSK
-General-Dynamics
-Goldman-Sachs
-Intel1
-International-Monetary-Fund
-Toyota-Motor-North-America
+General Dynamics
+Goldman Sachs
+Intel
+International Monetary Fund
+Toyota Motor North America
 Honeywell
 Koch
 Chevron
-UnitedHealth-Group
+UnitedHealth Group
 Walmart
 UBS
-Credit-Suisse
-L3-Technologies
+Credit Suisse
+L3 Technologies
 Allergan
-Morgan-Stanley
+Morgan Stanley
 Schlumberger
 Bayer
-Omnicom-Group
-P-G
-Epic-Systems
+Omnicom Group
+P&G
+Epic Systems
 Cognizant
-21st-Century-Fox
+21st Century Fox
 IPG
 Shire
 Amgen
-Marsh-McLennan-Cos
-Airbus-Group
+Marsh & McLennan Cos.
+Airbus Group
 Allstate
 Salesforce
 BP
@@ -90,8 +90,8 @@ Danaher
 Stryker
 Daimler
 ITW
-Johnson-Controls
-Boston-Scientific
+Johnson Controls
+Boston Scientific
 3M
 Lilly
 Barclays
@@ -100,15 +100,17 @@ Viacom
 Aon
 WPP
 Verizon
-Publicis-Groupe
-Deutsche-Bank
+Publicis Groupe
+Deutsche Bank
 Caterpillar
-Hewlett-Packard-Enterprise
-BAE-Systems"""
+Hewlett Packard Enterprise
+BAE Systems"""
 
 volumePerCompany = {}
 for line in s.splitlines():
-    response = requests.get("https://www.businesstravelnews.com/Corporate-Travel-100/2018/" + line).text
+    if 'McKinsey' in line:
+        line += ' '
+    response = requests.get("https://www.businesstravelnews.com/Corporate-Travel-100/2018/" + re.sub('\s*&\s*', '-', line).replace(' ', '-').replace('.', '').replace('Intel', 'Intel1')).text
     volumeStrings = [line for line in response.splitlines() if "Volume" in line]
     volumePerCompany[line] = float(re.search("\$(.*?) million", volumeStrings[0]).group(1))
 
