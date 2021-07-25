@@ -49,11 +49,22 @@ map = {
 'Pinterest': [107, 208],
 'Nutanix': [105, 152],
 'GM': [104, 76],
+'Indeed': [102, 134],
+'Accenture': [102, 123],
+'Tesla': [100, 130],
+'Comcast': [100, 89],
+'Zillow': [99, 165],
+'Qualtrics': [94, 139],
+'GoDaddy': [94, 126],
+'DoorDash': [90, 196],
+'Spotify': [87, 144],
+'MS': [86, 107],
+'Cerner': [85, 71],
 }
 for i in map:
-    if 1 in [c in i for c in {'SAP', 'Atlassian', 'Shopify', 'Yandex', 'ByteDance'}]:
+    if 1 in [c in i for c in {'SAP', 'Atlassian', 'Shopify', 'Yandex', 'ByteDance', 'Spotify'}]:
         plt.plot(map[i][0], map[i][1], 'oC2')
-    elif 1 in [c in i for c in {'IBM', 'Capital One', 'Bloomberg', 'Goldman Sachs', 'JPMorgan Chase', 'Walmart Labs', 'Wayfair', 'Dell', 'EPAM', "GM"}]:
+    elif 1 in [c in i for c in {'IBM', 'Capital One', 'Bloomberg', 'Goldman Sachs', 'JPMorgan Chase', 'Walmart Labs', 'Wayfair', 'Dell', 'EPAM', 'GM', 'Indeed', 'Accenture', 'Comcast', 'Qualtrics', 'GoDaddy', 'MS', 'Cerner'}]:
         plt.plot(map[i][0], map[i][1], 'oC1')
     else:
         plt.plot(map[i][0], map[i][1], 'oC0')
