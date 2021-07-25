@@ -13,7 +13,7 @@ map = {
 'IBM': [544, 101],
 'LinkedIn': [537, 214],
 'VMWare': [519, 145],
-'Capitol One': [488, 108],
+'Capital One': [488, 108],
 'Bloomberg': [478, 177],
 'Intel': [396, 125],
 'Goldman Sachs': [380, 136],
