@@ -32,9 +32,7 @@ map = {
 'Wayfair': [185, 114],
 'Workday': [180, 133],
 # Netflix
-'Yelp': [169, 178],
-'Dropbox': [168, 178],
-'Atlassian': [167, 178],
+'Yelp/Dropbox/Atlassian': [168, 178],
 'Shopify': [156, 84],
 'Visa': [154, 105],
 'Yahoo': [153, 132],
