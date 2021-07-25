@@ -51,9 +51,17 @@ map = {
 'GM': [104, 76],
 }
 for i in map:
-    plt.plot(map[i][0], map[i][1], 'or')
+    if 1 in [c in i for c in {'SAP', 'Atlassian', 'Shopify', 'Yandex', 'ByteDance'}]:
+        plt.plot(map[i][0], map[i][1], 'oC2')
+    elif 1 in [c in i for c in {'IBM', 'Capital One', 'Bloomberg', 'Goldman Sachs', 'JPMorgan Chase', 'Walmart Labs', 'Wayfair', 'Dell', 'EPAM', "GM"}]:
+        plt.plot(map[i][0], map[i][1], 'oC1')
+    else:
+        plt.plot(map[i][0], map[i][1], 'oC0')
     plt.annotate(i, (map[i][0], map[i][1]))
 
 plt.xlabel('Number of entries')
 plt.ylabel('Entry level compensation')
+plt.legend([plt.plot([], [], 'o')[0] for i in range(3)],
+           ['West coast', 'Rest of USA', 'Rest of World'],
+           labelcolor=['C0', 'C1', 'C2'])
 plt.show()
