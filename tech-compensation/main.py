@@ -31,7 +31,7 @@ map = {
 'SAP': [209, 112],
 'Wayfair': [185, 114],
 'Workday': [180, 133],
-# Netflix
+# 'Netflix': [176, 511],
 'Yelp/Dropbox/Atlassian': [168, 178],
 'Shopify': [156, 84],
 'Visa': [154, 105],
@@ -61,7 +61,10 @@ map = {
 'MS': [86, 107],
 'Cerner': [85, 71],
 }
+entries, comp = 0, 0
 for i in map:
+    entries += map[i][0]
+    comp += map[i][0] * map[i][1]
     if 1 in [c in i for c in {'SAP', 'Atlassian', 'Shopify', 'Yandex', 'ByteDance', 'Spotify'}]:
         plt.plot(map[i][0], map[i][1], 'oC2')
     elif 1 in [c in i for c in {'IBM', 'Capital One', 'Bloomberg', 'Goldman Sachs', 'JPMorgan Chase', 'Walmart Labs', 'Wayfair', 'Dell', 'EPAM', 'GM', 'Indeed', 'Accenture', 'Comcast', 'Qualtrics', 'GoDaddy', 'MS', 'Cerner'}]:
@@ -69,7 +72,8 @@ for i in map:
     else:
         plt.plot(map[i][0], map[i][1], 'oC0')
     plt.annotate(i, (map[i][0], map[i][1]))
-
+print(entries)
+print(comp/entries)
 plt.xlabel('Number of entries')
 plt.ylabel('Entry level compensation')
 plt.legend([plt.plot([], [], 'o')[0] for i in range(3)],
