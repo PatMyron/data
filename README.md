@@ -1,11 +1,11 @@
-The World's Billionaires List by Age
+Billionaire Age
 
-![screenshot](forbes-richest-by-age/screenshot.png)
+![screenshot](richest-by-age/screenshot.png)
 
-Retailers by Sales per Store
+Retail Sales per Store
 
-![screenshot](sales-per-store/screenshot.png)
+![screenshot](store-sales/screenshot.png)
 
-U.S.-Booked Air Volume by Company
+U.S. Company Air Volume
 
 ![screenshot](corporate-travel/screenshot.png)
