@@ -1,11 +1,13 @@
+Tech Pay
+
+<img src="pay/zoomed.png" width="49%"></img>
+<img src="pay/screenshot.png" width="49%"></img>
+
 Billionaire Age
 
-![screenshot](richest-by-age/screenshot.png)
+<img src="richest-by-age/screenshot.png" height="300"></img>
 
-Retail Sales per Store
+Company Data
 
-![screenshot](store-sales/screenshot.png)
-
-U.S. Company Air Volume
-
-![screenshot](corporate-travel/screenshot.png)
+<img src="store-sales/screenshot.png" width="49%"></img>
+<img src="corporate-travel/screenshot.png" width="49%"></img>
