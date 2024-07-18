@@ -1716,4 +1716,5 @@ for line in s.splitlines():
         print(line)
 plt.xlabel('Age')
 plt.ylabel('Wealth')
+plt.ylim(bottom=0)
 plt.show()
