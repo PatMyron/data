@@ -47,5 +47,8 @@ for i in veg:
     plt.plot(veg[i][1], veg[i][0], 'oC2')
     plt.annotate(i, (veg[i][1], veg[i][0]))
 plt.xlabel('Days to expire')
-plt.ylabel('USD per pound')
+plt.ylabel('USD / pound')
+plt.legend([plt.plot([], [], 'o')[0], plt.plot([], [], 'oC2')[0]],
+           ['Fruit', 'Vegetable'],
+           labelcolor="markerfacecolor")
 plt.show()
