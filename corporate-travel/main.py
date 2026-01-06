@@ -105,12 +105,12 @@ Deutsche Bank
 Caterpillar
 Hewlett Packard Enterprise
 BAE Systems"""
-
+SESSION = requests.Session()
 volumePerCompany = {}
 for line in s.splitlines():
     if 'McKinsey' in line:
         line += ' '
-    response = requests.get("https://www.businesstravelnews.com/Corporate-Travel-100/2018/" + re.sub('\s*&\s*', '-', line).replace(' ', '-').replace('.', '').replace('Intel', 'Intel1')).text
+    response = SESSION.get("https://www.businesstravelnews.com/Corporate-Travel-100/2018/" + re.sub('\s*&\s*', '-', line).replace(' ', '-').replace('.', '').replace('Intel', 'Intel1')).text
     volumeStrings = [line for line in response.splitlines() if "Volume" in line]
     volumePerCompany[line] = float(re.search("\$(.*?) million", volumeStrings[0]).group(1))
 
